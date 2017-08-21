@@ -24,12 +24,11 @@ export class InformacionService {
   carga_sobre_nosotros () {
     const headers: Headers = new Headers({
       'Content-Type': 'application/json; charset=UTF-8'
-    })
+    });
     return this.http.get( 'https://ng-http-4e270.firebaseio.com/equipo.json' )
       .subscribe( data => {
         this.cargada_sobre_nosotros = true;
         this.equipo =  data.json();
-        console.log( this.equipo );
       });
   }
 }
