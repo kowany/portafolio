@@ -12,7 +12,6 @@ export class SearchComponent {
 
   constructor( public route: ActivatedRoute, public _ps: ProductosService ) {
     this.route.params.subscribe( parametros => {
-      console.log( parametros['termino']);
       this.termino = parametros['termino'];
       this._ps.buscar_producto( this.termino );
     });

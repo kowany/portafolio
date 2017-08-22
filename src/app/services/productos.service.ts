@@ -20,7 +20,7 @@ export class ProductosService {
           // terminó la carga de productos
           this.filtrar_productos( termino );
 
-        })
+        });
     } else {
       this.filtrar_productos( termino );
     }
