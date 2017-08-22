@@ -3,9 +3,9 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class InformacionService {
-  info: any = {};
   cargada = false;
   cargada_sobre_nosotros = false;
+  info: any = {};
   equipo: any[] = [];
 
 

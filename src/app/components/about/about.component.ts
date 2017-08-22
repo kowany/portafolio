@@ -1,15 +1,15 @@
-import { Observable } from 'rxjs/Rx';
 import { Component } from '@angular/core';
 import { InformacionService } from './../../services/informacion.service';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
-  styles: []
+  templateUrl: './about.component.html'
 })
 export class AboutComponent {
+
   equipo: any[] = [];
   info: any = {};
+
   constructor( public _is: InformacionService ) {}
 
 }

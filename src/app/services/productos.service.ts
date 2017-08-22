@@ -17,9 +17,7 @@ export class ProductosService {
     if ( this.productos.length === 0 ) {
       this.cargar_productos()
         .then( () => {
-          // terminó la carga de productos
           this.filtrar_productos( termino );
-
         });
     } else {
       this.filtrar_productos( termino );
@@ -43,7 +41,7 @@ export class ProductosService {
   }
 
   public cargar_producto( cod: string ) {
-      return this.http.get( `https://ng-http-4e270.firebaseio.com/productos/${cod}.json` )
+      return this.http.get( `https://ng-http-4e270.firebaseio.com/productos/${cod}.json` );
   }
   public cargar_productos() {
     this.cargando = true;

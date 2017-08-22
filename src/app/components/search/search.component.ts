@@ -11,10 +11,12 @@ export class SearchComponent {
   termino: string = undefined;
 
   constructor( public route: ActivatedRoute, public _ps: ProductosService ) {
+
     this.route.params.subscribe( parametros => {
       this.termino = parametros['termino'];
       this._ps.buscar_producto( this.termino );
     });
-   }
+
+  }
 
 }
