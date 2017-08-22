@@ -27,7 +27,6 @@ export class ProductosService {
 
   }
   public filtrar_productos( termino ) {
-    console.clear();
     this.productos_filtrado = [];
 
     termino = termino.toLowerCase();
@@ -38,7 +37,6 @@ export class ProductosService {
 
       if ( prod.categoria.indexOf( termino ) >= 0 || prod.titulo.indexOf( termino ) >= 0 ) {
         this.productos_filtrado.push( prod );
-        console.log( prod );
       }
 
     });
